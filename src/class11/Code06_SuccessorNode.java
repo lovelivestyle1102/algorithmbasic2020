@@ -1,5 +1,9 @@
 package class11;
 
+/**
+ * 找节点后继
+ *
+ */
 public class Code06_SuccessorNode {
 
 	public static class Node {

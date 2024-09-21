@@ -1,5 +1,6 @@
 package class40;
 
+//定一个正方形矩阵matrix，原地调整成顺时针90度转动的样子
 public class Code05_PrintMatrixSpiralOrder {
 
 	public static void spiralOrderPrint(int[][] matrix) {

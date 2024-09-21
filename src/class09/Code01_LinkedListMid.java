@@ -2,6 +2,13 @@ package class09;
 
 import java.util.ArrayList;
 
+/**
+ * 1）输入链表头节点，奇数长度返回中点，偶数长度返回上中点
+ * 2） 输入链表头节点，奇数长度返回中点，偶数长度返回下中点
+ * 3）输入链表头节点，奇数长度返回中点前一个，偶数长度返回上中点前一个
+ * 4) 输入链表头节点，奇数长度返回中点前一个，偶数长度返回下中点前一个
+ *
+ */
 public class Code01_LinkedListMid {
 
 	public static class Node {
@@ -12,6 +19,87 @@ public class Code01_LinkedListMid {
 			value = v;
 		}
 	}
+
+
+	/**
+	 * 输入链表头节点，奇数长度返回中点，偶数长度返回上中点
+	 * @param head
+	 * @return
+	 */
+    public Node findMidUpNode(Node head){
+		if(head == null){
+			return null;
+		}
+
+		Node slow = head.next;
+		Node fast = head.next.next;
+
+		while(slow.next != null && fast.next.next != null){
+			slow = slow.next;
+			fast = fast.next.next;
+		}
+
+		return slow;
+	}
+
+	/**
+	 * 输入链表头节点，奇数长度返回中点，偶数长度返回下中点
+	 * @param head
+	 * @return
+	 */
+	public Node findMidDownNode(Node head){
+		if(head == null){
+			return null;
+		}
+
+		Node slow = head.next;
+		Node fast = head.next;
+
+		while(slow.next != null && fast.next.next != null){
+			slow = slow.next;
+			fast = fast.next.next;
+		}
+
+		return slow.next;
+	}
+
+	public Node findMidPreNode(Node head){
+		if (head == null || head.next == null || head.next.next == null) {
+			return null;
+		}
+		Node slow = head;
+		Node fast = head.next.next;
+		while (fast.next != null && fast.next.next != null) {
+			slow = slow.next;
+			fast = fast.next.next;
+		}
+		return slow;
+	}
+
+	public Node findMidBackNode(Node head){
+		if (head == null || head.next == null || head.next.next == null) {
+			return null;
+		}
+		Node slow = head;
+		Node fast = head.next;
+		while (fast.next != null && fast.next.next != null) {
+			slow = slow.next;
+			fast = fast.next.next;
+		}
+		return slow;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
 
 	// head 头
 	public static Node midOrUpMidNode(Node head) {

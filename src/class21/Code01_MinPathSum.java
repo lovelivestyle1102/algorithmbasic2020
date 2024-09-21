@@ -1,5 +1,10 @@
 package class21;
 
+/**
+ *
+ * 根据数据的依赖关系，可以进行空间压缩。减少空间利用
+ *
+ */
 public class Code01_MinPathSum {
 
 	public static int minPathSum1(int[][] m) {

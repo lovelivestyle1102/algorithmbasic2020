@@ -1,5 +1,10 @@
 package class10;
 
+/**
+ *
+ * 找到链表
+ *
+ */
 public class Code01_FindFirstIntersectNode {
 
 	public static class Node {

@@ -2,6 +2,10 @@ package class09;
 
 import java.util.Stack;
 
+/**
+ * 回文
+ *
+ */
 public class Code02_IsPalindromeList {
 
 	public static class Node {

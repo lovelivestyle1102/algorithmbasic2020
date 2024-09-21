@@ -3,6 +3,10 @@ package class14;
 import java.util.Arrays;
 import java.util.Comparator;
 
+/**
+ * 会议最优安排
+ *
+ */
 public class Code03_BestArrange {
 
 	public static class Program {

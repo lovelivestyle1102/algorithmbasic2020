@@ -5,11 +5,21 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 
+/**
+ * 加强堆
+ *
+ * 反向索引表
+ * @param <T>
+ */
 public class HeapGreater<T> {
 
 	private ArrayList<T> heap;
+
+	//反向索引
 	private HashMap<T, Integer> indexMap;
+
 	private int heapSize;
+
 	private Comparator<? super T> comp;
 
 	public HeapGreater(Comparator<? super T> c) {

@@ -3,6 +3,10 @@ package class11;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 二叉树和多叉树的相互转化
+ *
+ */
 // 本题测试链接：https://leetcode.com/problems/encode-n-ary-tree-to-binary-tree
 public class Code03_EncodeNaryTreeToBinaryTree {
 

@@ -32,6 +32,7 @@ public class Code03_MSumToN {
 		for (int num = 1; num < 200; num++) {
 			System.out.println(num + " : " + isMSum1(num));
 		}
+
 		System.out.println("test begin");
 		for (int num = 1; num < 5000; num++) {
 			if (isMSum1(num) != isMSum2(num)) {

@@ -14,9 +14,11 @@ public class Code02_FallingSquares {
 
 		public SegmentTree(int size) {
 			int N = size + 1;
+
 			max = new int[N << 2];
 
 			change = new int[N << 2];
+
 			update = new boolean[N << 2];
 		}
 

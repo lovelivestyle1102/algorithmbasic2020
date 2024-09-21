@@ -11,10 +11,13 @@ public class Code04_IPO {
 	// 返回最终最大的资金
 	public static int findMaximizedCapital(int K, int W, int[] Profits, int[] Capital) {
 		PriorityQueue<Program> minCostQ = new PriorityQueue<>(new MinCostComparator());
+
 		PriorityQueue<Program> maxProfitQ = new PriorityQueue<>(new MaxProfitComparator());
+
 		for (int i = 0; i < Profits.length; i++) {
 			minCostQ.add(new Program(Profits[i], Capital[i]));
 		}
+
 		for (int i = 0; i < K; i++) {
 			while (!minCostQ.isEmpty() && minCostQ.peek().c <= W) {
 				maxProfitQ.add(minCostQ.poll());

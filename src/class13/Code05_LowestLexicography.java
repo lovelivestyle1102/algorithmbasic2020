@@ -4,6 +4,11 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.TreeSet;
 
+/**
+ * 字符串拼接，求结果字典序最小
+ *
+ *
+ */
 public class Code05_LowestLexicography {
 
 	public static String lowestString1(String[] strs) {

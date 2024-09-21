@@ -1,5 +1,9 @@
 package class10;
 
+import java.util.HashSet;
+import java.util.Set;
+import java.util.Stack;
+
 public class Code02_RecursiveTraversalBT {
 
 	public static class Node {
@@ -12,14 +16,19 @@ public class Code02_RecursiveTraversalBT {
 		}
 	}
 
+	//递归序
 	public static void f(Node head) {
 		if (head == null) {
 			return;
 		}
+
+		System.out.println(head.value);
 		// 1
 		f(head.left);
+		System.out.println(head.value);
 		// 2
 		f(head.right);
+		System.out.println(head.value);
 		// 3
 	}
 
@@ -28,7 +37,7 @@ public class Code02_RecursiveTraversalBT {
 		if (head == null) {
 			return;
 		}
-		System.out.println(head.value);
+		System.out.print(head.value);
 		pre(head.left);
 		pre(head.right);
 	}
@@ -38,7 +47,7 @@ public class Code02_RecursiveTraversalBT {
 			return;
 		}
 		in(head.left);
-		System.out.println(head.value);
+		System.out.print(head.value);
 		in(head.right);
 	}
 
@@ -51,6 +60,79 @@ public class Code02_RecursiveTraversalBT {
 		System.out.println(head.value);
 	}
 
+	public static void preWithoutCursion(Node head){
+		Stack<Node> nodeStack = new Stack<>();
+
+		nodeStack.push(head);
+
+		while(!nodeStack.isEmpty()){
+			Node node = nodeStack.pop();
+			System.out.print(node.value);
+
+			if(node.right != null){
+				nodeStack.push(node.right);
+			}
+
+			if(node.left != null){
+				nodeStack.push(node.left);
+			}
+		}
+	}
+
+	public static void inWithoutCursion(Node head){
+		Stack<Node> nodeStack = new Stack<>();
+
+		//需要辅助列表记录已经访问过的记录
+		Set<Node> nodes = new HashSet<>();
+
+		nodeStack.push(head);
+
+		while(!nodeStack.isEmpty()){
+			Node node = nodeStack.peek();
+
+			if(!nodes.contains(node.left) && node.left != null){
+				nodeStack.push(node.left);
+				nodes.add(node.left);
+			}else{
+				System.out.print(node.value);
+
+				nodeStack.pop();
+
+				if(node.right != null) {
+					nodeStack.push(node.right);
+				}
+			}
+		}
+	}
+
+	public static void posWithoutCursion(Node head){
+//		Stack<Node> nodeStack = new Stack<>();
+//
+//		//需要辅助列表记录已经访问过的记录
+//		Set<Node> nodes = new HashSet<>();
+//
+//		nodeStack.push(head);
+//
+//		while(!nodeStack.isEmpty()){
+//			Node node = nodeStack.peek();
+//
+//			if(!nodes.contains(node.left) && node.left != null){
+//				nodeStack.push(node.left);
+//				nodes.add(node.left);
+//			}else{
+//				System.out.print(node.value);
+//
+//				nodeStack.pop();
+//
+//				if()
+//
+//				if(node.right != null) {
+//					nodeStack.push(node.right);
+//				}
+//			}
+//		}
+	}
+
 	public static void main(String[] args) {
 		Node head = new Node(1);
 		head.left = new Node(2);
@@ -60,12 +142,20 @@ public class Code02_RecursiveTraversalBT {
 		head.right.left = new Node(6);
 		head.right.right = new Node(7);
 
+//		f(head);
+//		preWithoutCursion(head);
+//		inWithoutCursion(head);
+
 		pre(head);
+		System.out.println("========");
+		preWithoutCursion(head);
 		System.out.println("========");
 		in(head);
 		System.out.println("========");
-		pos(head);
+		inWithoutCursion(head);
 		System.out.println("========");
+//		pos(head);
+//		System.out.println("========");
 
 	}
 

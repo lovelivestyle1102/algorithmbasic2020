@@ -1,5 +1,12 @@
 package class41;
 
+/**
+ * 给定一个整数数组arr，数组中的每个值都为正数，表示完成一副画作需要的时间，
+ * 再给定一个正数num表示画匠的数量，每个画匠只能画连在一起的画作。所有的画家并行工作，
+ * 请返回完成所有的画作需要的最少时间
+ *
+ *
+ */
 // leetcode原题
 // 测试链接：https://leetcode.com/problems/split-array-largest-sum/
 public class Code04_SplitArrayLargestSum {

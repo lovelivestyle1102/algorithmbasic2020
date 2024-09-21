@@ -1,5 +1,9 @@
 package class26;
 
+/**
+ *
+ * 给定一个数组arr,返回所有子数组最小值的累加和
+ */
 // 测试链接：https://leetcode.com/problems/sum-of-subarray-minimums/
 // subArrayMinSum1是暴力解
 // subArrayMinSum2是最优解的思路

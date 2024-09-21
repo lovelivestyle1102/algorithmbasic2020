@@ -1,5 +1,10 @@
 package class22;
 
+/**
+ * 拆数
+ * 后面的要大于前面的
+ *
+ */
 public class Code03_SplitNumber {
 
 	// n为正数

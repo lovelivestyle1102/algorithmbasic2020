@@ -1,6 +1,10 @@
 package class41;
 
-// 四边形不等式：合并石子问题
+/**
+ * 摆放着n堆石子。现要将石子有次序地合并成一堆
+ * 规定每次只能选相邻的2堆石子合并成新的一堆，并将新的一堆石子数记为该次合并的得分
+ * 求出將n堆石子合并成一堆的最小得分（或最大得分） 合并方案
+ */
 public class Code03_StoneMerge {
 
 	public static int[] sum(int[] arr) {

@@ -7,7 +7,9 @@ public class Code03_AC1 {
 
 	public static class Node {
 		public int end; // 有多少个字符串以该节点结尾
+
 		public Node fail;
+
 		public Node[] nexts;
 
 		public Node() {
